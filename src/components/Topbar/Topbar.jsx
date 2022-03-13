@@ -9,12 +9,13 @@ import { FaUser } from "react-icons/fa";
 
 function Topbar() {
   return (
-    <div className='top'>
-       <div className='topbar'>
-                <Link className='topitem' to='/'><FaUser /></Link>
-                {/* <NavLink className='navitem' activeClassName="active" to="/contacts"><FaAddressBook /></NavLink> */}
-        </div>
+    
+    <div className='topbar'>
+        
+        <Link className='topitem' to='/'><FaUser /></Link>
+        {/* <NavLink className='navitem' activeClassName="active" to="/contacts"><FaAddressBook /></NavLink> */}
     </div>
+    
   )
 }
 

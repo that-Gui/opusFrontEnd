@@ -1,8 +1,10 @@
 
 .nav{
+    position: absolute;
+    z-index: 100;
     display: flex;
     flex-direction: column;
-    width: 5vw;
+    width: 5rem;
     height: 100vh;
     padding: 0.8rem;
     background-color: var(--dark);

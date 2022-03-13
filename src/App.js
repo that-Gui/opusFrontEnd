@@ -12,7 +12,7 @@ function App() {
       <Navbar />
       <Topbar />
       <Routes>
-        <Route path='/' /* element={<h1>Hello Gui</h1>} */ />
+        <Route path='/' element={<h1 className='container'>Hello Gui</h1>} />
       </Routes>
     </div>
   );

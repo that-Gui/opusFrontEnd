@@ -1,0 +1,27 @@
+
+.top{
+    margin-left: 5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 3.5rem;
+    width: 95vw;
+    border-bottom: 1px solid var(--dark);
+    background-color: var(--third);
+}
+
+.topbar{
+    padding: 0.8rem;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.topitem{
+    margin-left: 5rem;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.topitem:hover{
+        color: var(--secondary);
+}

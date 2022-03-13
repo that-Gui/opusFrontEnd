@@ -1,0 +1,36 @@
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 5vw;
+    height: 100vh;
+    padding: 0.8rem;
+    background-color: var(--dark);
+    align-items: center;
+}
+
+/* ul{
+    list-style: none;
+} */
+
+.navlogo{
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.navitem{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--light);
+}
+
+.active{
+    margin-bottom: 3rem;
+    font-size: 2rem;
+    color: var(--accent);
+}
+
+.navitem:hover{
+    color: var(--secondary);
+}

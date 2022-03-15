@@ -12,8 +12,11 @@ function Contactspage() {
 
   const [contact, setcontact] = useState([])
   const [actcontact, setActcontact] = useState(null)
-  /* const [edtcontact, setEdtcontact] = useState(null) */
+  /* const [edtcontact, setEdtcontact] = useState(null)
 
+  const editc = (contact) => {
+    setEdtcontact(contact);
+  }; */
 
   const changeact = (contact) => {
     setActcontact(contact);
@@ -48,7 +51,7 @@ function Contactspage() {
 
         <div className="contactdetails">
             { actcontact && <Contactdetails ac={actcontact} /> }
-            { actcontact && <Contactedit ce={actcontact} /> }
+            {/* { edtcontact ? <Contactedit ce={edtcontact} /> : <Contactdetails ac={actcontact} ed={editc}/> } */}
         </div>
         
     </div>

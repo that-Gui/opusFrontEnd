@@ -12,6 +12,8 @@ function Contactspage() {
 
   const [contact, setcontact] = useState([])
   const [actcontact, setActcontact] = useState(null)
+  /* const [edtcontact, setEdtcontact] = useState(null) */
+
 
   const changeact = (contact) => {
     setActcontact(contact);
@@ -38,15 +40,17 @@ function Contactspage() {
 
   return (
     <div className='container'>
-        <div className="cnc">
-            < FaPlusSquare className='topitem'/>
-        </div>
+       
         <div className="contactslist">
-           { contact && <Contactslist ct={contact} act={changeact}/>}
+          < FaPlusSquare className='addc'/>
+          { contact && <Contactslist ct={contact} act={changeact}/>}
         </div>
+
         <div className="contactdetails">
-            { actcontact && <Contactdetails ac={actcontact}/>}
+            { actcontact && <Contactdetails ac={actcontact} /> }
+            { actcontact && <Contactedit ce={actcontact} /> }
         </div>
+        
     </div>
   )
 }

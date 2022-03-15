@@ -5,9 +5,6 @@ import '../Contactspage/Contactspage.css';
 //section for components
 import { FaEdit } from "react-icons/fa";
 
-import { FaEraser } from "react-icons/fa";
-
-
 
 function Contactdetails(props) {
   
@@ -26,7 +23,8 @@ function Contactdetails(props) {
         <p>{props.ac.accounts}</p>
         <p>{props.ac.deals}</p>
         <p>{props.ac.user}</p>
-        <FaEdit className='topitem'/>
+        <FaEdit className='topitem' ce={props.ac._id}/>
+        
        {/*  } */}
     </div>
   )

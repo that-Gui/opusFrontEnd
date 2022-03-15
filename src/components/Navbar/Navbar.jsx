@@ -9,6 +9,8 @@ import { FaBuilding } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa";
 import { FaCube } from "react-icons/fa";
 import { FaDev } from "react-icons/fa";
+import { FaCartPlus } from "react-icons/fa";
+
 
 
 
@@ -18,6 +20,7 @@ function Navbar() {
        
            <FaDev className='navlogo'/>
            <NavLink className='navitem' activeClassName="active" to="/"><FaCube /></NavLink>
+           <NavLink className='navitem' activeClassName="active" to="/products"><FaCartPlus /></NavLink>
            <NavLink className='navitem' activeClassName="active" to="/contacts"><FaAddressBook /></NavLink>
            <NavLink className='navitem' activeClassName="active" to="/accounts"><FaBuilding /></NavLink>
            <NavLink className='navitem' activeClassName="active" to="/deals"><FaBriefcase /></NavLink>

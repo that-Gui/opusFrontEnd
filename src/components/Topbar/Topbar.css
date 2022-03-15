@@ -1,15 +1,4 @@
 
-.top{
-    margin-left: 5rem;
-    /* position: absolute;
-    top: 0;
-    right: 0; */
-    height: 3.8rem;
-    /* width: 100vw; */
-    /* border-bottom: 1px solid var(--dark); */
-    background-color: var(--third);
-}
-
 .topbar{
     padding: 0.8rem;
     display: flex;

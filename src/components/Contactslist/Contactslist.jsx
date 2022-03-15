@@ -1,42 +1,20 @@
 //section for utilities
 import React, {useState, useEffect} from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import axios from 'axios';
-import '../Contactslist/Contactslist.css'
+import '../Contactspage/Contactspage.css';
 //section for components
-import Contactdetails from '../Contactdetails/Contactdetails';
 
 
-function Contactslist() {
-  const [contact, setcontact] = useState([])
 
-  const fetchContacts = async () => {
-    try {
-      const storedToken = localStorage.getItem('authToken');
-
-      let response = await axios.get(`${process.env.REACT_APP_API_URL}/api/contact`, {
-        headers: { Authorization: `Bearer ${storedToken}` },
-      });
-      setcontact(response.data);
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    fetchContacts();
-  }, []);
-
+function Contactslist(props) {
+  
     return (
-    <div>
-        {contact.map( (element) =>
-            <div className="listcard" key={contact._id}>
-              <Link to={`api/contact/${element._id}`}>
+    <div className=''>
+        {props.ct.map( (element) =>
+            <div className="listcard" key={element._id} onClick={ () => props.act(element)}>
               <h5>{element.firstName} {element.lastName}</h5>
               <p>{element.accounts}</p>
-              <p>{element.jobTitle}</p>    
-              
-              </Link>
+              <p>{element.jobTitle}</p>  
+              {/* <button onClick={ () => props.act(element)}>lkdjfklsjdfhjfgkjdhfgkj</button>  */} 
             </div>
         )}
     </div>

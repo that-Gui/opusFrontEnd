@@ -2,7 +2,7 @@
 .contactslist{
     display: flex;
     flex-direction: column;
-    width: 21rem;
+    width: 25rem;
     margin-left: 3rem;
     border-radius: 8px;
     border: 1px solid var(--secondary);
@@ -15,8 +15,23 @@
     border: 1px solid var(--secondary);
 }
 
-/* .listcard{
+.topitem{
+    margin-left: 5rem;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.topitem:hover{
+        color: var(--secondary);
+}
+
+.listcard{
+
     background-color: var(--third);
     height: 5rem;
     margin-bottom: 1rem;
-} */
+}
+
+img{
+    height: 3rem;
+}

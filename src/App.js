@@ -24,11 +24,11 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         {/* <Route path='/profile' element={<Profile />} /> */}
-        <Route path='/' element={<Locked><img src="./image.png" alt="possible dashboard layout pic" ></img></Locked>} />
-        <Route path='/products' element={<Locked><Products /></Locked>} />
-        <Route path='/contacts' element={<Locked><Contactspage /></Locked>} />
-        <Route path='/accounts' element={<Locked><Accountspage /></Locked>} />
-        <Route path='/deals' element={<Locked><Dealspage /></Locked>} />
+        <Route path='/' element={<img src="./image.png" alt="possible dashboard layout pic" ></img>} />
+        <Route path='/products' element={<Products />} />
+        <Route path='/contacts' element={<Contactspage />} />
+        <Route path='/accounts' element={<Accountspage />} />
+        <Route path='/deals' element={<Dealspage />} />
 
       </Routes>
     </div>

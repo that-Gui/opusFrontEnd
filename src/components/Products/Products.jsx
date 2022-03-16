@@ -1,42 +1,40 @@
-//section for utilities import
+//import section for utils
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-//import section for components
+/*  section for importing components */
 
 
 
 function Products() {
 
-    const [products, setProducts] = useState([]);
+const [products, setProducts] = useState([]);
 
 useEffect(() => {
     
-    axios.get(``).then((response) =>{
-        setProducts(response.data)}).catch((err) =>
+    axios.get(`https://ih-beers-api2.herokuapp.com/beers`).then((response) =>{
+      setProducts(response.data)}).catch((err) =>
         console.log(err));
 }, []);
-  
-  return (
+
+
+    return (
     <div className='container'>
 
-        <div className="prodgrid">
-            <h1>this will be the products grid components</h1>
-            {products && products.map((el) =>
-            <div className='prodcard'>
+        {products && products.map((el) =>
+        <div >
             <Link to={`/beers/${el._id}`}>
             <img src={el.image_url} alt="beerpic" />
             <h3>{el.name}</h3>
             <h5>{el.tagline}</h5>
             <p>Created by: {el.contributed_by}</p>
             </Link>
-            </div>
-            )} 
         </div>
+        )}
 
     </div>
   )
-}
+};
 
 export default Products

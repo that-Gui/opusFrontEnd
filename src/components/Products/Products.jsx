@@ -23,7 +23,7 @@ useEffect(() => {
     <div className='container'>
 
         {products && products.map((el) =>
-        <div >
+        <div className='card-btn'>
             <Link to={`/beers/${el._id}`}>
             <img src={el.image_url} alt="beerpic" />
             <h3>{el.name}</h3>

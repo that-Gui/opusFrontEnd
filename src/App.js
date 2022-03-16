@@ -23,7 +23,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         {/* <Route path='/profile' element={<Profile />} /> */}
-        <Route path='/' element={<img src="../../public/image.png" alt="possible dashboard layout pic" width="500" height="600"></img>} />
+        <Route path='/' element={<img src="../public/image.png" alt="possible dashboard layout pic" ></img>} />
         <Route path='/products' element={<Products />} />
         <Route path='/contacts' element={<Contactspage />} />
         <Route path='/accounts' element={<Accountspage />} />

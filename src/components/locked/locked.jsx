@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+/* import { useContext } from 'react';
 import { AuthContext } from '../context/auth.context';
 import { Navigate } from 'react-router-dom';
 
@@ -14,4 +14,4 @@ function Locked({ children }) {
   }
 }
 
-export default Locked;
+export default Locked; */

@@ -6,7 +6,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Topbar from './components/Topbar/Topbar.jsx';
 import Signup from './components/Signup/Signup.jsx';
 import Login from './components/Login/Login.jsx';
-import Locked from './components/locked/locked';
+/* import Locked from './components/locked/locked'; */
 /* import Profile from './components/Profile/Profile'; */
 import Products from './components/Products/Products';
 import Contactspage from './components/Contactspage/Contactspage';

@@ -51,7 +51,7 @@ function Contactspage() {
         <div className="contactdetails">
             { (actcontact && (display === 'details')) && <Contactdetails ac={actcontact} handleDisplayState={handleDisplayState} /> }
             { (actcontact && (display === 'edit')) && <Contactedit ce={actcontact} rac={fetchContacts} handleDisplayState={handleDisplayState} /> }
-            {(actcontact && (display === 'create')) && <Contactcreate rac={fetchContacts} handleDisplayState={handleDisplayState} />}
+            { /* (actcontact && ( */display === 'create'/* )) */  && <Contactcreate rac={fetchContacts} handleDisplayState={handleDisplayState} />}
 
             {/* { edtcontact ? <Contactedit ce={edtcontact} /> : <Contactdetails ac={actcontact} ed={editc}/> } */}
         </div>

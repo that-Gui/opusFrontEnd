@@ -9,6 +9,7 @@ import Login from './components/Login/Login.jsx';
 /* import Profile from './components/Profile/Profile'; */
 import Products from './components/Products/Products';
 import Contactspage from './components/Contactspage/Contactspage';
+import Accountspage from './components/Accountspage/Accountspage';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <Route path='/' element={<h1 className='container'>hello gui, this is the dashboard</h1>} />
         <Route path='/products' element={<Products />} />
         <Route path='/contacts' element={<Contactspage />} />
-        <Route path='/accounts' element={<h1 className='container'>hello gui, this is the accounts page</h1>} />
+        <Route path='/accounts' element={<Accountspage />} />
         <Route path='/deals' element={<h1 className='container'>hello gui, this is the deals page</h1>} />
 
 

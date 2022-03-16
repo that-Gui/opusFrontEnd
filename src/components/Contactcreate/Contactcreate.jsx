@@ -25,13 +25,6 @@ function Contactcreate(props) {
     const body = {firstName, /* lastName, */ email, telephone, /* jobTitle, timezone, */ location }
     axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, body, {headers: { Authorization: `Bearer ${storedToken}`}})
         .then((response) => {
-          /* setFirstName('');
-          setLastName('');
-          setEmail('');
-          setTelephone(0);
-          setJobTitle('');
-          setTimezone('');
-          setLocation(''); */
           props.rac();
           props.handleDisplayState('details');
         })

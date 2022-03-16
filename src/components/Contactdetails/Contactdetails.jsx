@@ -23,6 +23,7 @@ function Contactdetails(props) {
         <p>{props.ac.accounts}</p>
         <p>{props.ac.deals}</p>
         <p>{props.ac.user}</p>
+        <hr />
         <FaEdit className='ceitem' ce={props.ac._id} ed={props.ac._id}/>
         
        {/*  } */}

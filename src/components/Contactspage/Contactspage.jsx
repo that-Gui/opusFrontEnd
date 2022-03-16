@@ -6,6 +6,7 @@ import './Contactspage.css';
 import Contactslist from '../Contactslist/Contactslist';
 import Contactdetails from '../Contactdetails/Contactdetails';
 import Contactedit from '../Contactedit/Contactedit';
+import Contactcreate from '../Contactcreate/Contactcreate';
 import { FaPlusSquare } from "react-icons/fa";
 
 function Contactspage() {
@@ -51,6 +52,9 @@ function Contactspage() {
 
         <div className="contactdetails">
             { actcontact && <Contactdetails ac={actcontact} /> }
+            { actcontact && <Contactedit ce={actcontact} /> }
+            <Contactcreate />
+
             {/* { edtcontact ? <Contactedit ce={edtcontact} /> : <Contactdetails ac={actcontact} ed={editc}/> } */}
         </div>
         

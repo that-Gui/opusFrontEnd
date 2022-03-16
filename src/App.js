@@ -6,6 +6,7 @@ import Navbar from './components/Navbar/Navbar.jsx';
 import Topbar from './components/Topbar/Topbar.jsx';
 import Signup from './components/Signup/Signup.jsx';
 import Login from './components/Login/Login.jsx';
+/* import Profile from './components/Profile/Profile'; */
 import Contactspage from './components/Contactspage/Contactspage';
 
 
@@ -17,7 +18,7 @@ function App() {
       <Routes>
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/profile' element={<h1 className='container'>this wil be the profile page</h1>} />
+        {/* <Route path='/profile' element={<Profile />} /> */}
         <Route path='/' element={<h1 className='container'>hello gui, this is the dashboard</h1>} />
         <Route path='/products' element={<h1 className='container'>hello gui, this is the products page</h1>} />
         <Route path='/contacts' element={<Contactspage />} />

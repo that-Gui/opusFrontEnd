@@ -13,11 +13,7 @@ function Contactspage() {
 
   const [contact, setcontact] = useState([])
   const [actcontact, setActcontact] = useState(null)
-  /* const [edtcontact, setEdtcontact] = useState(null)
-
-  const editc = (contact) => {
-    setEdtcontact(contact);
-  }; */
+  const [display, setDisplay] = useState('details')
 
   const changeact = (contact) => {
     setActcontact(contact);
@@ -38,6 +34,8 @@ function Contactspage() {
     }
   };
 
+  const handleDisplayState = (display) => setDisplay(display);
+
   useEffect(() => {
     fetchContacts();
   }, []);
@@ -46,14 +44,14 @@ function Contactspage() {
     <div className='container'>
        
         <div className="contactslist">
-          < FaPlusSquare className='addc'/>
-          { contact && <Contactslist ct={contact} act={changeact}/>}
+          < FaPlusSquare className='addc' onClick={() => handleDisplayState('create')}/>
+          { contact && <Contactslist ct={contact} act={changeact} handleDisplayState={handleDisplayState}/>}
         </div>
 
         <div className="contactdetails">
-            { actcontact && <Contactdetails ac={actcontact} /> }
-            { actcontact && <Contactedit ce={actcontact} /> }
-            <Contactcreate />
+            { (actcontact && (display === 'details')) && <Contactdetails ac={actcontact} handleDisplayState={handleDisplayState} /> }
+            { (actcontact && (display === 'edit')) && <Contactedit ce={actcontact} rac={fetchContacts} handleDisplayState={handleDisplayState} /> }
+            {(actcontact && (display === 'create')) && <Contactcreate rac={fetchContacts} handleDisplayState={handleDisplayState} />}
 
             {/* { edtcontact ? <Contactedit ce={edtcontact} /> : <Contactdetails ac={actcontact} ed={editc}/> } */}
         </div>

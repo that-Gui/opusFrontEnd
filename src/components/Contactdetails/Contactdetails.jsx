@@ -10,7 +10,7 @@ function Contactdetails(props) {
   
     return (
     <div className='detailspane'>
-       {/* { { props.ac &&}  */}
+
         <img src={props.ac.avatar} alt="profile pic" />
         <h2>{props.ac.firstName}</h2>
         <p>{props.ac.lastName}</p>
@@ -23,10 +23,8 @@ function Contactdetails(props) {
         <p>{props.ac.accounts}</p>
         <p>{props.ac.deals}</p>
         <p>{props.ac.user}</p>
-        <hr />
-        <FaEdit className='ceitem' ce={props.ac._id} ed={props.ac._id}/>
-        
-       {/*  } */}
+        <FaEdit onClick={ () => props.handleDisplayState('edit')} className='ceitem' ce={props.ac._id} />
+     
     </div>
   )
 }

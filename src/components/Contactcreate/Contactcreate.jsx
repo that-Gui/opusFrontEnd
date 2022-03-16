@@ -6,7 +6,7 @@ import '../Contactspage/Contactspage.css';
 //import section for components
 import { FaCheckSquare } from "react-icons/fa";
 
-function Contactcreate() {
+function Contactcreate(props) {
       
     const [firstName, setFirstName] = useState('');
     /* const [lastName, setLastName] = useState(''); */
@@ -20,21 +20,20 @@ function Contactcreate() {
 
     const storedToken = localStorage.getItem('authToken');
 
-    const navigate = useNavigate();
-
     const handleSubmit = (e) => {
       e.preventDefault();
     const body = {firstName, /* lastName, */ email, telephone, /* jobTitle, timezone, */ location }
     axios.post(`${process.env.REACT_APP_API_URL}/api/contact/`, body, {headers: { Authorization: `Bearer ${storedToken}`}})
         .then((response) => {
-          setFirstName('');
-          /* setLastName(''); */
+          /* setFirstName('');
+          setLastName('');
           setEmail('');
           setTelephone(0);
-          /* setJobTitle('');
-          setTimezone(''); */
-          setLocation('');
-          navigate('/contacts');
+          setJobTitle('');
+          setTimezone('');
+          setLocation(''); */
+          props.rac();
+          props.handleDisplayState('details');
         })
         .catch((err) => console.log(err));
     };

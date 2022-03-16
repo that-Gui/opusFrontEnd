@@ -11,10 +11,12 @@ import { FaCheckSquare } from "react-icons/fa";
 
 function Contactedit(props) {
   
+  const { ce } = props
+
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
-  const [telephone, setTelephone] = useState(0);
+  const [telephone, setTelephone] = useState('');
   const [jobTitle, setJobTitle] = useState('');
   const [timezone, setTimezone] = useState('');
   const [location, setLocation] = useState('');
@@ -25,28 +27,39 @@ function Contactedit(props) {
     const navigate = useNavigate();
 
     const deleteContact = () => {
-        axios.delete(`${process.env.REACT_APP_API_URL}/api/contact/${props.ce._id}`, {
+        axios.delete(`${process.env.REACT_APP_API_URL}/api/contact/${ce._id}`, {
             headers: { Authorization: `Bearer ${storedToken}` },
-          }).then((response) => navigate('/contacts'));
+          }).then((response) => props.rac());
     };
 
     const handleSubmit = (e) => {
       e.preventDefault();
     const body = {firstName, lastName, email, telephone, jobTitle, timezone, location }
-    axios.put(`${process.env.REACT_APP_API_URL}/api/contact/${props.ce._id}`, body, {headers: { Authorization: `Bearer ${storedToken}`}})
+    axios.put(`${process.env.REACT_APP_API_URL}/api/contact/${ce._id}`, body, {headers: { Authorization: `Bearer ${storedToken}`}})
         .then((response) => {
-          setFirstName('');
+          /* setFirstName('');
           setLastName('');
           setEmail('');
           setTelephone(0);
           setJobTitle('');
           setTimezone('');
-          setLocation('');
-          navigate('/contacts');
+          setLocation(''); */
+          props.rac();
+          props.handleDisplayState('details');
         })
         .catch((err) => console.log(err));
     };
 
+
+    useEffect(() => {
+      setFirstName(ce.firstName);
+      setLastName(ce.lastName);
+      setEmail(ce.email);
+      setTelephone(ce.telephone);
+      setJobTitle(ce.jobTitle);
+      setTimezone(ce.timezone);
+      setLocation(ce.location);
+    }, [ce])
       
     return (
 
@@ -57,25 +70,25 @@ function Contactedit(props) {
         
         <form onSubmit={handleSubmit}>
         <label htmlFor="firstName">firstName</label>
-        <input type="text" onChange={(e) => setFirstName(e.target.value)} />
+        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
 
         <label htmlFor="lastName">lastName</label>
-        <input type="text" onChange={(e) => setLastName(e.target.value)} />
+        <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
 
         <label htmlFor="email">email</label>
-        <input type="email" onChange={(e) => setEmail(e.target.value)} />
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
 
         <label htmlFor="telephone">telephone</label>
-        <input type="number" onChange={(e) => setTelephone(e.target.value)} />
+        <input type="number" value={telephone} onChange={(e) => setTelephone(e.target.value)} />
 
         <label htmlFor="jobTitle">jobTitle</label>
-        <input type="text" onChange={(e) => setJobTitle(e.target.value)} />
+        <input type="text" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)} />
 
         <label htmlFor="timezone">timezone</label>
-        <input type="text" onChange={(e) => setTimezone(e.target.value)} />
+        <input type="text" value={timezone} onChange={(e) => setTimezone(e.target.value)} />
 
         <label htmlFor="location">location</label>
-        <input type="text" onChange={(e) => setLocation(e.target.value)} />
+        <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
 
         <button type="submit"><FaCheckSquare /></button>
         </form>

@@ -10,6 +10,7 @@ import Login from './components/Login/Login.jsx';
 import Products from './components/Products/Products';
 import Contactspage from './components/Contactspage/Contactspage';
 import Accountspage from './components/Accountspage/Accountspage';
+import Dealspage from './components/Dealspage/Dealspage';
 
 
 function App() {
@@ -18,17 +19,15 @@ function App() {
       <Navbar />
       <Topbar />
       <Routes>
+
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         {/* <Route path='/profile' element={<Profile />} /> */}
-        <Route path='/' element={<h1 className='container'>hello gui, this is the dashboard</h1>} />
+        <Route path='/' element={<h1 className='container'>insert image here</h1>} />
         <Route path='/products' element={<Products />} />
         <Route path='/contacts' element={<Contactspage />} />
         <Route path='/accounts' element={<Accountspage />} />
-        <Route path='/deals' element={<h1 className='container'>hello gui, this is the deals page</h1>} />
-
-
-        {/* <Route path='/' element={<h1 className='container'>Hello Gui</h1>} /> */}
+        <Route path='/deals' element={<Dealspage />} />
 
       </Routes>
     </div>

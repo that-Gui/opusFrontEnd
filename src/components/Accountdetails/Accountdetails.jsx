@@ -1,6 +1,6 @@
 //section for utilities
 import React, {useState, useEffect} from 'react';
-import '../Accountdetails/Accountdetails.css';
+import '../Accountspage/Accountspage.css';
 
 //section for components
 import { FaEdit } from "react-icons/fa";

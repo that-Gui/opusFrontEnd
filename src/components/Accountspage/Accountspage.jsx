@@ -1,7 +1,7 @@
 //utilities section
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import '../Accountspage/Accountspage.css';
+import './Accountspage.css';
 // components import section
 import Accountslist from '../Accountslist/Accountslist';
 import { FaPlusSquare } from "react-icons/fa";

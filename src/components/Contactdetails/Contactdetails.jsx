@@ -11,15 +11,19 @@ function Contactdetails(props) {
     return (
     <div className='detailspane'>
 
-        <img src={props.ac.avatar} alt="profile pic" />
+        <div className="namesec">
         <h2>{props.ac.firstName}</h2>
         <p>{props.ac.lastName}</p>
+        </div>
+        <img src={props.ac.avatar} alt="profile pic" />
+        <div className="contdeets">
+        <p>{props.ac.jobTitle}</p>
         <p>{props.ac.email}</p>
         <p>{props.ac.telephone}</p>
-        <p>{props.ac.jobTitle}</p>
+        </div>
+        <hr />
         <p>{props.ac.timezone}</p>
         <p>{props.ac.location}</p>
-        <hr />
         <p>{props.ac.accounts}</p>
         <p>{props.ac.deals}</p>
         <p>{props.ac.user}</p>

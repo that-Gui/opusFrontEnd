@@ -31,6 +31,10 @@
 .listcard{
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    
+    gap: 1rem;
     background-color: var(--third);
     height: 4rem;
     padding: 1rem;

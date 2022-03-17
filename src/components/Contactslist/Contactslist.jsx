@@ -8,15 +8,23 @@ import '../Contactspage/Contactspage.css';
 function Contactslist(props) {
   
     return (
-    <div className=''>
+    <div>
         {props.ct.map( (element) =>
             <div className="listcard" key={element._id} onClick={ () => {
               props.act(element)
               props.handleDisplayState('details');
               }}>
-              <h5>{element.firstName} {element.lastName}</h5>
+                <div className="form-col">
+           
+              <h4>{element.firstName} {element.lastName}</h4>
+              </div>
+            
+              <div className="form-col">
+              
               <p>{element.accounts}</p>
-              <p>{element.jobTitle}</p>  
+              <p>{element.jobTitle}</p>
+              </div>
+             
               {/* <button onClick={ () => props.act(element)}>lkdjfklsjdfhjfgkjdhfgkj</button>  */} 
             </div>
         )}

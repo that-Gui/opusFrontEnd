@@ -8,15 +8,21 @@ import '../Accountspage/Accountspage.css';
 function Accountslist(props) {
   
     return (
-    <div className=''>
+    <div>
         {props.ct.map( (element) =>
             <div className="listcard" key={element._id} onClick={ () => {
               props.act(element)
               props.handleDisplayState('details');
               }}>
-              <h5>{element.name}</h5>
+                <div className="form-col">
+
+              <h4>{element.name}</h4>
+              </div>
+              <div className="form-col">
+
               <p>{element.industryType}</p>
-              <p>{element.telephone}</p>  
+              {/* <p>{element.telephone}</p> */}  
+              </div>
 
             </div>
         )}

@@ -2,9 +2,8 @@
 import {useState, useEffect} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
+import './Products.css'
 /*  section for importing components */
-
 
 
 function Products() {
@@ -22,16 +21,18 @@ useEffect(() => {
     return (
     <div className='container'>
 
+        <div className="productgrid">
         {products && products.map((el) =>
-        <div className='card-btn'>
-            <Link to={`/beers/${el._id}`}>
+        <div className='pcard'>
+            <>
             <img src={el.image_url} alt="beerpic" />
             <h3>{el.name}</h3>
             <h5>{el.tagline}</h5>
             <p>Created by: {el.contributed_by}</p>
-            </Link>
+            </>
         </div>
         )}
+        </div>
 
     </div>
   )

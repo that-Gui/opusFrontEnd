@@ -64,4 +64,52 @@
 .detailspane{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.contact {
+    display:flex;
+
+}
+
+.namesec {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 1rem;
+}
+
+.namesec h2 {
+    margin-bottom: 0.5rem;
+}
+
+.contdeets {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-right: 2.2rem;
+
+}
+
+.contact-info {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+h4 {
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+
+}
+
+.detailsbox {
+    display:flex;
+flex-direction: row;
+margin-top: 1.5rem;
 }

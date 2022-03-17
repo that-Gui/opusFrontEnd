@@ -63,34 +63,50 @@ function Contactedit(props) {
       
     return (
 
-    <div>
+    <div className='detailspane'>
 
         <FaEraser className='ceitem' onClick={deleteContact}/>
-        <hr />
-        
+       
         <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">firstName</label>
-        <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+      <div className="triggered"> 
+        <div className="form-col">
+          <div className="form-box">
+          <label htmlFor="firstName">First Name</label>
+          <input type="text" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
+          </div>
+          <div className="form-box">
+          <label htmlFor="lastName">Surname</label>
+          <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
+          </div>
+        </div>
+        
+        <div className="form-col">
+          <div className="form-box">
+          <label htmlFor="email">Email</label>
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+          </div>
+          <div className="form-box">
+          <label htmlFor="telephone">Telephone</label>
+          <input type="number" value={telephone} onChange={(e) => setTelephone(e.target.value)} />
+          </div>
+          <div className="form-box">
+          <label htmlFor="jobTitle">Job Title</label>
+          <input type="text" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)} />
+          </div>
+        </div>
 
-        <label htmlFor="lastName">lastName</label>
-        <input type="text" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-
-        <label htmlFor="email">email</label>
-        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-
-        <label htmlFor="telephone">telephone</label>
-        <input type="number" value={telephone} onChange={(e) => setTelephone(e.target.value)} />
-
-        <label htmlFor="jobTitle">jobTitle</label>
-        <input type="text" value={jobTitle} onChange={(e) => setJobTitle(e.target.value)} />
-
-        <label htmlFor="timezone">timezone</label>
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="timezone">Timezone</label>
         <input type="text" value={timezone} onChange={(e) => setTimezone(e.target.value)} />
-
-        <label htmlFor="location">location</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="location">Location</label>
         <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
-
-        <button type="submit"><FaCheckSquare /></button>
+        </div>
+        </div>
+        </div>
+        <button type="submit" className='ceitem'><FaCheckSquare className='ceitem'/></button>
         </form>
 
         {/* <p>{contact.accounts}</p>

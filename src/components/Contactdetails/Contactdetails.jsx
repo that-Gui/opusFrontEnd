@@ -11,9 +11,10 @@ function Contactdetails(props) {
     return (
 
     <div className='detailspane'>
-
-      <div className="namepic">
+      <div className="contdeets">
+          <div className="namepic">
           <img src={props.ac.avatar} alt="profile pic" />
+          </div>
           <div className='namepicds'>
           <h4>Name</h4>
           <p>{props.ac.firstName}</p>

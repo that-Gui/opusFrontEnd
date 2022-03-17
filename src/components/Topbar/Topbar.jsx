@@ -1,5 +1,5 @@
 //import section for utilities
-import React from 'react'
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../context/auth.context';
 import './Topbar.css';
@@ -12,14 +12,20 @@ import { FaSignOutAlt } from "react-icons/fa";
 
 
 function Topbar() {
+  
+  const { loggedIn, user, logoutUser } = useContext(AuthContext);
+
   return (
     
     <div className='topbar'>
-        
+        { loggedIn && <>
         {/* <Link className='topitem' to='/profile'><FaUser /></Link> */}
+        <Link className='topitem' to='/logout' onClick={logoutUser}><FaSignOutAlt /></Link>
+        </>}
+        { !loggedIn && <>
         <Link className='topitem' to='/signup'><FaSignature /></Link>
         <Link className='topitem' to='/login'><FaSignInAlt /></Link>
-        <Link className='topitem' to='/logout'><FaSignOutAlt /></Link>
+        </>}
         {/* <NavLink className='navitem' activeClassName="active" to="/contacts"><FaAddressBook /></NavLink> */}
     </div>
     

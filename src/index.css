@@ -59,8 +59,12 @@ body {
   }
 
   .dashpic {
-    margin: 1rem;
-    
+    margin: 0.3rem;
+  }
+  .dashpic img {
+    border-radius: 0;
+    height: 39rem;
+    width: 69rem;
   }
 /* 
 

@@ -41,14 +41,14 @@ function Login() {
     <div className='container'>
         <div className="lif">
             <h1>Login</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} >
             <div>
             {/* <label htmlFor="username">Username</label> */}
-            <input type="text" name="username" value={username} onChange={handleUsername} placeholder='Username'/>
+            <input type="text" name="username" value={username} onChange={handleUsername} placeholder='Username' className='formstyleee'/>
             </div>
             <div>
             {/* <label htmlFor="password">Password</label> */}
-            <input type="password" name="password" value={password} onChange={handlePassword} placeholder='Password'/>
+            <input type="password" name="password" value={password} onChange={handlePassword} placeholder='Password' className='formstyleee'/>
             </div>
             <div>
             <button type="submit" className='subtn'> Login</button>

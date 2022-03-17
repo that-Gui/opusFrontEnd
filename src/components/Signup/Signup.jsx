@@ -36,20 +36,20 @@ function Signup() {
   
     return (
     <div className='container'>
-        <div className="suc">
+        <div className="lif">
             <h1>Signup</h1>
             <form onSubmit={handleSubmit}>
             <div>
             {/* <label htmlFor="email">email</label> */}
-            <input type="email" name="email" value={email} onChange={handleEmail} placeholder='email'/>
+            <input type="email" name="email" value={email} onChange={handleEmail} placeholder='email' className='formstyleee'/>
             </div>
             <div>
             {/* <label htmlFor="username">Username</label> */}
-            <input type="text" name="username" value={username} onChange={handleUsername} placeholder='username'/>
+            <input type="text" name="username" value={username} onChange={handleUsername} placeholder='username' className='formstyleee'/>
             </div>
             <div>
             {/* <label htmlFor="password">Password</label> */}
-            <input type="password" name="password" value={password} onChange={handlePassword} placeholder='password'/>
+            <input type="password" name="password" value={password} onChange={handlePassword} placeholder='password' className='formstyleee'/>
             </div>
             <div>
             <button type="submit" className='subtn'> Signup</button>

@@ -20,7 +20,7 @@ function Topbar() {
     <div className='topbar'>
         { loggedIn && <>
         {/* <Link className='topitem' to='/profile'><FaUser /></Link> */}
-        <Link className='topitem' to='/logout' onClick={logoutUser}><FaSignOutAlt /></Link>
+        <Link className='topitem' to='/' onClick={logoutUser}><FaSignOutAlt /></Link>
         </>}
         { !loggedIn && <>
         <Link className='topitem' to='/signup'><FaSignature /></Link>

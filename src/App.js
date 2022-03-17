@@ -12,7 +12,7 @@ import Products from './components/Products/Products';
 import Contactspage from './components/Contactspage/Contactspage';
 import Accountspage from './components/Accountspage/Accountspage';
 import Dealspage from './components/Dealspage/Dealspage';
-import Dashpic from 'src/Dashboardv1.png'
+import Dashboardpic from './components/Dashboardpage/Dashboardpic';
 
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/login' element={<Login />} />
         {/* <Route path='/profile' element={<Profile />} /> */}
-        <Route path='/' element={<Dashpic />} />
+        <Route path='/' element={<Dashboardpic />} />
         <Route path='/products' element={<Locked><Products /></Locked>} />
         <Route path='/contacts' element={<Locked><Contactspage /></Locked>} />
         <Route path='/accounts' element={<Accountspage />} />

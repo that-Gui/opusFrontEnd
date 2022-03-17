@@ -11,18 +11,56 @@ function Accountdetails(props) {
     return (
     <div className='detailspane'>
 
-        <img src={props.ac.avatar} alt="profile pic" />
-        <h2>{props.ac.name}</h2>
-        <p>{props.ac.industryType}</p>
-        <p>{props.ac.timezone}</p>
-        <p>{props.ac.location}</p>
-        <p>{props.ac.email}</p>
-        <p>{props.ac.telephone}</p>
-        <p>{props.ac.employees}</p>
-        <hr />
-        <p>{props.ac.revenue}</p>
-        <p>{props.ac.contacts}</p>
-        <p>{props.ac.deals}</p>
+        <div className="contdeets">
+          <img src={props.ac.avatar} alt="profile pic" />
+          <div  className='namepicds'>
+          <h4>Business Name</h4>
+          <p>{props.ac.name}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>Industry type</h4>
+          <p>{props.ac.industryType}</p>
+          </div>
+        </div>
+
+        <div className="contdeets">
+          <div  className='namepicds'>
+          <h4>Location</h4>
+          <p>{props.ac.location}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>Email</h4>
+          <p>{props.ac.email}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>Telephone</h4>
+          <p>{props.ac.telephone}</p>
+          </div>
+        </div>
+
+        <div className="contdeets">
+          <div  className='namepicds'>
+          <h4>Number of Employees</h4>
+          <p>{props.ac.employees}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>TimeZone</h4>
+          <p>{props.ac.timezone}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>Yearly Revenue</h4>
+          <p>{props.ac.revenue}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>Contacts</h4>
+          <p>{props.ac.contacts}</p>
+          </div>
+          <div  className='namepicds'>
+          <h4>Deals</h4>
+          <p>{props.ac.deals}</p>
+          </div>
+        </div>
+
         <FaEdit onClick={ () => props.handleDisplayState('edit')} className='ceitem' ce={props.ac._id} />
      
     </div>

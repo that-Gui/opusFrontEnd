@@ -16,10 +16,12 @@
     background-color: var(--third);
     border-radius: 8px;
     color: var(--dark);
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .pcard img{
     height: 6rem;
     width: auto;
     border-radius: 0;
+    margin-bottom: 1rem;
 }

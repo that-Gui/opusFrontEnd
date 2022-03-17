@@ -16,7 +16,7 @@ function Contactdetails(props) {
           <img src={props.ac.avatar} alt="profile pic" />
           </div>
           <div className='namepicds'>
-          <h4>Name</h4>
+          <h4>First Name</h4>
           <p>{props.ac.firstName}</p>
           </div>
           <div  className='namepicds'>

@@ -29,22 +29,37 @@ function Dealscreate(props) {
 
         
   return (
-    <div>
+
+    <div className='detailspane'>
 
         <form onSubmit={handleSubmit}>
-        <label htmlFor="name">name</label>
+        <div className="triggered">
+         
+         <div className="form-col">
+         <div className="form-box">
+        <label htmlFor="name">Deal</label>
         <input type="text" onChange={(e) => setName(e.target.value)} />
-
-        <label htmlFor="closeDate">closeDate</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="closeDate">CloseDate</label>
         <input type="text" onChange={(e) => setCloseDate(e.target.value)} />
+        </div>
+        </div>
 
-        <label htmlFor="sum">sum</label>
+        <div className="form-col">
+         <div className="form-box">
+        <label htmlFor="sum">Total Sum</label>
         <input type="number" onChange={(e) => setSum(e.target.value)} />
-
-        <label htmlFor="stages">stages</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="stages">Stage</label>
         <input type="text" onChange={(e) => setStages(e.target.value)} />
+        </div>
+        </div>
 
-        <button type="submit"><FaCheckSquare /></button>
+        </div>
+
+        <button type="submit" className='ceitem'><FaCheckSquare className='ceitem' /></button>
         </form>
 
     </div>

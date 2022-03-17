@@ -14,7 +14,7 @@ function Dealsdetails(props) {
 
         <div className="contdeets">
         <div  className='namepicds'>
-          <h4>Name</h4>
+          <h4>Deal</h4>
           <h2>{props.ac.name}</h2>
           </div>
         <div  className='namepicds'>

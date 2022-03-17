@@ -33,31 +33,44 @@ function Contactcreate(props) {
 
         
   return (
-    <div>
+    <div className='detailspane'>
 
         <form onSubmit={handleSubmit}>
-        <label htmlFor="firstName">firstName</label>
+        <div className="triggered">
+         
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="firstName">First Name</label>
         <input type="text" onChange={(e) => setFirstName(e.target.value)} />
-
+        </div>
         {/* <label htmlFor="lastName">lastName</label>
         <input type="text" onChange={(e) => setLastName(e.target.value)} /> */}
-
-        <label htmlFor="email">email</label>
+        <div className="form-box">
+        <label htmlFor="email">Email</label>
         <input type="email" onChange={(e) => setEmail(e.target.value)} />
+        </div>
+        </div>
 
-        <label htmlFor="telephone">telephone</label>
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="telephone">Telephone</label>
         <input type="number" onChange={(e) => setTelephone(e.target.value)} />
+        </div>
+        
 
         {/* <label htmlFor="jobTitle">jobTitle</label>
         <input type="text" onChange={(e) => setJobTitle(e.target.value)} />
 
         <label htmlFor="timezone">timezone</label>
         <input type="text" onChange={(e) => setTimezone(e.target.value)} /> */}
-
-        <label htmlFor="location">location</label>
+        <div className="form-box">
+        <label htmlFor="location">Location</label>
         <input type="text" onChange={(e) => setLocation(e.target.value)} />
+        </div>
+        </div>
 
-        <button type="submit"><FaCheckSquare /></button>
+        </div>
+        <button type="submit" className='ceitem'><FaCheckSquare className='ceitem' /></button>
         </form>
 
         {/* <p>{contact.accounts}</p>

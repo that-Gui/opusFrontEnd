@@ -28,22 +28,38 @@ function Accountcreate(props) {
 
         
   return (
-    <div>
+    <div className='detailspane'>
 
         <form onSubmit={handleSubmit}>
-        <label htmlFor="name">name</label>
+        <div className="triggered">
+         
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="name">Company Name</label>
         <input type="text" onChange={(e) => setName(e.target.value)} />
-
-        <label htmlFor="industryType">industryType</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="industryType">Industry Sector</label>
         <input type="text" onChange={(e) => setIndustryType(e.target.value)} />
+        </div>
+        </div>
 
-        <label htmlFor="email">email</label>
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="email">Email</label>
         <input type="email" onChange={(e) => setEmail(e.target.value)} />
+        </div>
 
-        <label htmlFor="telephone">telephone</label>
+        <div className="form-box">
+
+        <label htmlFor="telephone">Telephone</label>
         <input type="number" onChange={(e) => setTelephone(e.target.value)} />
+        </div>
+        </div>
+        </div>
 
-        <button type="submit"><FaCheckSquare /></button>
+
+        <button type="submit" className='ceitem'><FaCheckSquare className='ceitem' /></button>
         </form>
 
        

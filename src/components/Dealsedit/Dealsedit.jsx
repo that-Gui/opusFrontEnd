@@ -56,39 +56,60 @@ function Dealsedit(props) {
       
     return (
 
-    <div>
+    <div className='detailspane'>
 
         <FaEraser className='ceitem' onClick={deleteDeal}/>
-        <hr />
         
         <form onSubmit={handleSubmit}>
-        <label htmlFor="name">name</label>
+        
+        <div className="triggered">
+         
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="name">Deal</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-
-        <label htmlFor="closeDate">closeDate</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="closeDate">CloseDate</label>
         <input type="text" value={closeDate} onChange={(e) => setCloseDate(e.target.value)} />
-
-        <label htmlFor="sum">sum</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="sum">Total Sum</label>
         <input type="number" value={sum} onChange={(e) => setSum(e.target.value)} />
+        </div>
+        </div>
 
-        <label htmlFor="stages">stages</label>
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="stages">Stage</label>
         <input type="text" value={stages} onChange={(e) => setStages(e.target.value)} />
-
-        <label htmlFor="notes">notes</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="notes">Notes</label>
         <input type="text" value={notes} onChange={(e) => setNotes(e.target.value)} />
-
-        <label htmlFor="products">products</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="products">Products</label>
         <input type="text" value={products} onChange={(e) => setProducts(e.target.value)} />
+        </div>
+        </div>
 
-        <label htmlFor="contacts">contacts</label>
+        <div className="form-col">
+        <div className="form-box">
+        <label htmlFor="contacts">Contacts</label>
         <input type="text" value={contacts} onChange={(e) => setContacts(e.target.value)} />
-
-        <label htmlFor="accounts">accounts</label>
+        </div>
+        <div className="form-box">
+        <label htmlFor="accounts">Account</label>
         <input type="text" value={accounts} onChange={(e) => setAccounts(e.target.value)} />
+        </div>
+        </div>
 
-        <button type="submit"><FaCheckSquare /></button>
+        </div>
+        <button type="submit" className='ceitem'><FaCheckSquare className='ceitem' /></button>
         </form>
-       
+
+   
     </div>
   )
 }

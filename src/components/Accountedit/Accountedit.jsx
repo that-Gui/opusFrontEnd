@@ -63,43 +63,68 @@ function Accountedit(props) {
       
     return (
 
-    <div>
+    <div className='detailspane'>
 
         <FaEraser className='ceitem' onClick={deleteContact}/>
-        <hr />
-        
+      
         <form onSubmit={handleSubmit}>
+
+        <div className="triggered">
+
+        <div className="form-col">
+        <div className="form-box">
         <label htmlFor="name">name</label>
         <input type="text" value={name} onChange={(e) => setName(e.target.value)} />
-
+        </div>
+        <div className="form-box">
         <label htmlFor="industryType">industryType</label>
         <input type="text" value={industryType} onChange={(e) => setIndustryType(e.target.value)} />
-
+        </div>
+        <div className="form-box">
         <label htmlFor="timezone">timezone</label>
         <input type="text" value={timezone} onChange={(e) => setTimezone(e.target.value)} />
+        </div>
+        </div>
 
+        <div className="form-col">
+        <div className="form-box">
         <label htmlFor="location">location</label>
         <input type="text" value={location} onChange={(e) => setLocation(e.target.value)} />
-
+        </div>
+        <div className="form-box">
         <label htmlFor="email">email</label>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-
+        </div>
+        <div className="form-box">
         <label htmlFor="telephone">telephone</label>
         <input type="number" value={telephone} onChange={(e) => setTelephone(e.target.value)} />
+        </div>
+        </div>
 
+        <div className="form-col">
+        <div className="form-box">
         <label htmlFor="employees">employees</label>
         <input type="text" value={employees} onChange={(e) => setEmployees(e.target.value)} />
-        
+        </div>
+        <div className="form-box">
         <label htmlFor="revenue">revenue</label>
         <input type="text" value={revenue} onChange={(e) => setRevenue(e.target.value)} />
-
+        </div>
+        <div className="form-box">
         <label htmlFor="contacts">contacts</label>
         <input type="text" value={contacts} onChange={(e) => setContacts(e.target.value)} />
+        </div>
+        </div>
 
+        <div className="form-col">
+        <div className="form-box">
         <label htmlFor="deals">deals</label>
         <input type="text" value={deals} onChange={(e) => setDeals(e.target.value)} />
+        </div>
+        </div>
 
-        <button type="submit"><FaCheckSquare /></button>
+        </div>
+        <button type="submit" className='ceitem'><FaCheckSquare className='ceitem'/></button>
         </form>
        
     </div>

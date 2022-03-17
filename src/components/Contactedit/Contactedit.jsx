@@ -68,7 +68,9 @@ function Contactedit(props) {
         <FaEraser className='ceitem' onClick={deleteContact}/>
        
         <form onSubmit={handleSubmit}>
-      <div className="triggered"> 
+
+      <div className="triggered">
+         
         <div className="form-col">
           <div className="form-box">
           <label htmlFor="firstName">First Name</label>

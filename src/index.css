@@ -58,10 +58,9 @@ body {
 
   }
 
-  .dashpic img{
-    margin: 5rem;
-    height: 50rem;
-    width: 50rem;
+  .dashpic {
+    margin: 1rem;
+    
   }
 /* 
 
